@@ -39,7 +39,7 @@ steps:
   displayName: Git clone TerraformModules repo
   inputs:
     targetType: inline
-    script: git clone https://$(PersonalAccessToken)@github.com/markgossa/HashiTalk1-TerraformModules.git --branch develop --single-branch --verbose $(Build.Repository.LocalPath)\Deployment\Terraform\TerraformModules
+    script: git clone https://$(PersonalAccessToken)@github.com/markgossa/HashiTalk1-TerraformModules.git --branch master --single-branch --verbose $(Build.Repository.LocalPath)\Deployment\Terraform\TerraformModules
 
 - task: CmdLine@2
   displayName: Terraform Install
