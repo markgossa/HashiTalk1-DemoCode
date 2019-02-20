@@ -7,5 +7,6 @@ namespace AzureDurableFunctionsDemo1.Models
     public class UserInfo
     {
         public string Name { get; set; }
+        public string Location { get; set; }
     }
 }

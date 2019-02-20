@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDurableFunctionsDemo1", "AzureDurableFunctionsDemo1\AzureDurableFunctionsDemo1.csproj", "{8BE8382B-CD88-4F9B-A026-CB4BE14E7FB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureDurableFunctionsDemo1.Tests", "AzureDurableFunctionsDemo1.Tests\AzureDurableFunctionsDemo1.Tests.csproj", "{F9442523-6B42-4C06-ACAF-902AC85E18D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDurableFunctionsDemo1.Tests", "AzureDurableFunctionsDemo1.Tests\AzureDurableFunctionsDemo1.Tests.csproj", "{F9442523-6B42-4C06-ACAF-902AC85E18D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
