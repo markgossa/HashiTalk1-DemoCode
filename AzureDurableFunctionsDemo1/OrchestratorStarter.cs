@@ -18,7 +18,7 @@ namespace AzureDurableFunctionsDemo1
             UserInfo userInfo = await req.Content.ReadAsAsync<UserInfo>();
 
             // Function input comes from the request content.
-            string instanceId = await starter.StartNewAsync("Orchestrator", userInfo.Name);
+            string instanceId = await starter.StartNewAsync("Orchestrator", userInfo);
 
             log.LogInformation($"Started orchestration with ID = '{instanceId}'.");
 

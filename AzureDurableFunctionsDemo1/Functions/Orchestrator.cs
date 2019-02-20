@@ -1,5 +1,6 @@
 ﻿using Microsoft.Azure.WebJobs;
 using System.Threading.Tasks;
+using AzureDurableFunctionsDemo1.Models;
 
 namespace AzureDurableFunctionsDemo1.Functions
 {
@@ -9,9 +10,13 @@ namespace AzureDurableFunctionsDemo1.Functions
         public static async Task<string> RunOrchestrator(
             [OrchestrationTrigger] DurableOrchestrationContext context)
         {
-            string output = null;
-            string name = context.GetInput<string>();
-            output = await context.CallActivityAsync<string>("HelloActivity", name);
+            var userInfo = context.GetInput<UserInfo>();
+
+            var timeGreeting = await context.CallActivityAsync<string>("TimeGreeting", userInfo.Name);
+            var locationGreeting = await context.CallActivityAsync<string>("LocationGreeting", userInfo.Location);
+
+            string output = $"{timeGreeting} {locationGreeting}";
+
             return output;
         }
     }

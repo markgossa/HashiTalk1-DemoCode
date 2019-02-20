@@ -8,8 +8,8 @@ namespace AzureDurableFunctionsDemo1.Tests
         [Fact]
         public void TestSayHello()
         {
-            string output = HelloActivity.SayHello("Joe");
-            string correctOutput = "Hello Joe!";
+            string output = TimeGreeting.SayHello("Good evening", "Joe");
+            string correctOutput = "Good evening Joe!";
             Assert.Equal(correctOutput, output);
         }
     }
