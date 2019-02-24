@@ -36,7 +36,7 @@ steps:
   displayName: Publish
   inputs:
     command: 'publish'
-    projects: '**/AzureDurableFunctionsDemo1.csproj'
+    projects: '**/*.csproj'
     arguments: '--configuration $(BuildConfiguration) --output $(build.ArtifactStagingDirectory)'
     zipAfterPublish: true
     publishWebProjects: false
