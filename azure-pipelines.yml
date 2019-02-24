@@ -30,13 +30,13 @@ steps:
   displayName: Generate list of projects to publish
   inputs:
     targetType: inline
-    script: $value = (Get-ChildItem -Depth 2 -Include *.csproj -ErrorAction SilentlyContinue | Where-Object {$_.Name -notmatch "test"}).FullName; Write-Host "##vso[task.setvariable variable=ProjectsToPublish;issecret=false]$Value"
+    script: $value = (Get-ChildItem -Depth 2 -Include *.csproj -ErrorAction SilentlyContinue | Where-Object {$_.Name -notmatch "test"}).BaseName; Write-Host "##vso[task.setvariable variable=ProjectsToPublish;issecret=false]$Value"
 
 - task: DotNetCoreCLI@2
   displayName: Publish
   inputs:
     command: 'publish'
-    projects: '**/*.csproj'
+    projects: '**/$(ProjectsToPublish).csproj'
     arguments: '--configuration $(BuildConfiguration) --output $(build.ArtifactStagingDirectory)'
     zipAfterPublish: true
     publishWebProjects: false
