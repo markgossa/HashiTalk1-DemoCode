@@ -1,5 +1,5 @@
-ResourceGroupName = "RG-HashiTalks"
+ResourceGroupName = "RG-Demo"
 ResourceGroupLocation = "West Europe"
 StorageAccountName = "storage79432fdsh"
 AppServicePlanName = "ConsumptionPlanASP"
-FunctionAppName = "hashitalksfunctionapp794"
+FunctionAppName = "demofunctionapp794fds"
